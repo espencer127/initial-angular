@@ -1,20 +1,253 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<app-layout>
 
+  <div class="container">  
+
+    <h1>Bike Triage Checklist</h1>
+
+    <div class="row">
+        <div class="w3-third">
+        <h3>Front End</h3>
+        </div>
+    </div>
+    
+  
+    <div class="row">    
+      <div class="w3-third">
+      <p>Front Wheel</p>
+      </div>
+      
+      <div class="w3-third">
+      <p><button type="button" id="button2" class="btn btn-default" (click)="addRepair('0', true)">Out of true
+      </button></p>
+      </div>
+      
+      <div class="w3-third">
+      <p><button type="button" id="button2" class="btn btn-default" (click)="addRepair('0', true)">Out of true
+      </button></p>
+      </div>
+    </div>
+    
+    <div class="row">
+    <div class="w3-third">
+    <p>Front Hub</p>
+    </div>
+    
+    <div class="w3-third">
+    <p><button type="button" id="button3" class="btn btn-default" (click)="addRepair('1', false)">Feels fine
+    </button></p>
+    </div>
+    
+    <div class="w3-third">
+    <p><button type="button" id="button4" class="btn btn-default" (click)="addRepair('1', true)">Bearings are loose
+    </button></p>
+    </div>
+    </div>
+    
+    <div class="row">
+    <div class="w3-third">
+    <p>Front Brake</p>
+    </div>
+    
+    <div class="w3-third">
+    <p><button type="button" id="button5" class="btn btn-default" (click)="addRepair('2', false)">Acceptable</button></p>
+    </div>
+    <div class="w3-third">
+    <p><button type="button" id="button6" class="btn btn-default" (click)="addRepair('2', true)">Needs work
+    </button></p>
+    </div>
+    </div>
+    
+    <div class="row">
+        <div class="w3-third">
+    <p>Headset</p>
+    </div>
+  
+  <div class="w3-third">
+    <p><button type="button" id="button7" class="btn btn-default">Feels fine
+    </button></p>
+  </div>
+  
+  <div class="w3-third">
+    <p><button type="button" id="button8" class="btn btn-default">Bearings are loose
+    </button></p>
+  </div>
+    </div>
+
+
+    <div class="row">
+        <div class="w3-third">
+        <h3>Mid Drive</h3>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="w3-third">
+          <p>Bottom Bracket</p>
+      </div>
+      
+      <div class="w3-third">
+        <button type="button" id="button9" class="btn btn-default">Feels fine
+        </button>
+      </div>
+      <div class="w3-third">
+        <button type="button" id="button10" class="btn btn-default">Bearings are loose
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="w3-third">
+        <h3>Rear End</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="w3-third">
+        <p>Rear Wheel</p>
+      </div>
+              
+      <div class="w3-third">
+        <button type="button" id="button11" class="btn btn-default">True</button>
+      </div>
+
+      <div class="w3-third">
+        <button type="button" id="button12" class="btn btn-default">Out of True</button>
+      </div>
+    </div>
+            
+    <div class="row">
+      <div class="w3-third">
+        <p>Rear Hub</p>
+      </div>
+            
+      <div class="w3-third">
+        <button type="button" id="button13" class="btn btn-default">Feels fine</button>
+      </div>
+      <div class="w3-third">
+        <button type="button" id="button14" class="btn btn-default">Bearings are loose</button>
+      </div>
+    </div>
+            
+    <div class="row">
+      <div class="w3-third">
+        <p>Rear Brake</p>
+      </div>
+      
+      <div class="w3-third">
+        <button type="button" id="button15" class="btn btn-default">Acceptable</button>
+      </div>
+      
+      <div class="w3-third">
+        <button type="button" id="button16" class="btn btn-default">Needs work</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="w3-third">
+        <h3>Shifting</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="w3-third">
+        <p>Front Shifting</p>
+      </div>
+      <div class="w3-third">
+        <button type="button" id="button17" class="btn btn-default">Works fine</button>
+      </div>
+      <div class="w3-third">
+        <button type="button" id="button18" class="btn btn-default">Needs work</button>      
+      </div>
+    </div>  
+        
+    <div class="row">
+      <div class="w3-third">
+        <p>Rear Shifting</p>
+      </div>
+
+      <div class="w3-third">
+        <button type="button" id="button19" class="btn btn-default">Works fine</button>
+      </div>
+      <div class="w3-third">
+        <button type="button" id="button20" class="btn btn-default">Needs work</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="w3-third">
+        <h3>Wear Items</h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="w3-third">
+        <p>Front Tire</p>
+      </div>
+      <div class="w3-third">
+        <button type="button" id="button21" class="btn btn-default">It's fine</button>
+      </div>
+      <div class="w3-third">
+        <button type="button" id="button22" class="btn btn-default">Needs replacing</button>
+      </div>
+    </div>
+        
+    <div class="row">
+    <div class="w3-third">
+        <p>Front Tube</p>
+    </div>
+    <div class="w3-third">
+        <button type="button" id="button23" class="btn btn-default">It holds air</button>
+    </div>
+    <div class="w3-third">
+        <button type="button" id="button24" class="btn btn-default">It's not holding air</button>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="w3-third">
+        <p>Pedals</p>
+      </div>
+      <div class="w3-third">
+        <button type="button" id="button25" class="btn btn-default">Acceptable</button>
+      </div>
+      <div class="w3-third">
+        <button type="button" id="button26" class="btn btn-default">Not present/needs replacing</button>
+      </div>
+    </div>
+
+    <hr>
+
+    <br><br>
+    <div class="printableArea">
+    <div class="row text-left" id="theseRepairsNeeded">
+      <div class="col-md-3"></div>
+      <div class="col-md-8 text-left">
+        <h3>Here's what we found:</h3>
+      </div>
+    </div>
+    <div class="row text-left">
+      <div class="col-md-3"></div>
+      <div class="col-md-8" id="repairsGoHere">
+          <div class="col-md-8" *ngFor="let inst of filteredArray ">
+              <p>{{ inst.area }} {{ inst.repair }} {{inst.isNeeded }}</p>
+            </div>
+      </div>
+    </div>
+    </div>
+
+    <hr>
+
+    <br>
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <button type="button" class="btn btn-block btn-primary printButton"  id='printButton' value='Print'>Print It
+          </button>
+      </div>
+    </div>
+
+    <br><br>
+
+   
+  </div>
+</app-layout>

@@ -1,1 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+
+
+.row {
+    float:left;
+    width:100%;
+    padding:0.01em 16px;
+}
+
+.w3-third {
+    float:left;
+    width:33.33333%;
+}
+
+@media only screen and (max-width:450px){
+    h1 {
+        font-size:24px;
+    }
+    h2 {
+        font-size:20px;
+    }
+    h3 {
+        font-size:20px;
+    }
+    #clock {
+        font-size:12px;
+    }
+    .btn {
+        font-size:12px;
+    }
+    
+}
+
+.w3-row-padding,.w3-row-padding>.w3-half,
+.w3-row-padding>.w3-third,.w3-row-padding>.w3-twothird,
+.w3-row-padding>.w3-threequarter,.w3-row-padding>.w3-quarter,
+.w3-row-padding>.w3-col{padding:0 8px}
+
+/*max with 400:
+change h1&h2 font size
+make a max button width?*/
+
+.btn {
+    white-space:normal;
+    background-color:transparent;
+    background:rgba(250,250,250,.1);
+}
+
+#clock {
+  font-size:14px;
+}
+
+.radio input[type="radio"] {
+  float:none;
+  margin-left:5px;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.w3-container, .container{
+    background-color:white;
+    background: rgba(250,250,250,.7);
+    padding:0.01em 16px;
+    margin-top:1%;
+    margin-bottom:16px;
+    margin-left:2.5%;
+    margin-right:2.5%;
+    width:95%;
+}
+    
+#grad1 {
+    background:linear-gradient(to bottom,#FF1493, purple);
+}
+
+hr {
+    size:10;
+    border-color:black;
+}
