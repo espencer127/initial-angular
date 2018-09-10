@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { AFilterComponent } from './a-filter/a-filter.component';
 import { ButtonComponent } from './button/button.component';
 import { ButtComponent } from './butt/butt.component';
+import { HeaderRowComponent } from './header-row/header-row.component';
+import { BikePartRowComponent } from './bike-part-row/bike-part-row.component';
 // import { Globals } from './globals';
 
 
@@ -15,7 +17,9 @@ import { ButtComponent } from './butt/butt.component';
     AppComponent,
     AFilterComponent,
     ButtonComponent,
-    ButtComponent
+    ButtComponent,
+    HeaderRowComponent,
+    BikePartRowComponent
   ],
   imports: [
     NgbModule,

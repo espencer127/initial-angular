@@ -1,31 +1,17 @@
-<app-layout>
 
+<app-layout>
   <div class="container">  
 
     <h1>Bike Triage Checklist</h1>
 
-    <div class="row">
-        <div class="w3-third">
-        <h3>Front End</h3>
-        </div>
-    </div>
+    <app-header-row customTitle='Front End'></app-header-row>
+
+    <app-bike-part-row 
+      customTitle='Front Brake' buttonTitle1='True' 
+      buttonTitle2='Out of True' startIndex='0'
+      func2 = "(click)=addRepair('0',false,'0')"
+      ></app-bike-part-row>
     
-  
-    <div class="row">    
-      <div class="w3-third">
-      <p>Front Wheel</p>
-      </div>
-      
-      <div class="w3-third">
-      <p><button type="button" id="button2" class="btn btn-default" (click)="addRepair('0', true)">Out of true
-      </button></p>
-      </div>
-      
-      <div class="w3-third">
-      <p><button type="button" id="button2" class="btn btn-default" (click)="addRepair('0', true)">Out of true
-      </button></p>
-      </div>
-    </div>
     
     <div class="row">
     <div class="w3-third">
@@ -33,12 +19,12 @@
     </div>
     
     <div class="w3-third">
-    <p><button type="button" id="button3" class="btn btn-default" (click)="addRepair('1', false)">Feels fine
+    <p><button type="button" id="button3" class="btn btn-default" [ngClass]="{'btn-success':isClicked[2]}" (click)="addRepair('1', false,'2')">Feels fine
     </button></p>
     </div>
     
     <div class="w3-third">
-    <p><button type="button" id="button4" class="btn btn-default" (click)="addRepair('1', true)">Bearings are loose
+    <p><button type="button" id="button4" class="btn btn-default" [ngClass]="{'btn-danger':isClicked[3]}" (click)="addRepair('1', true,'3')">Bearings are loose
     </button></p>
     </div>
     </div>
@@ -74,11 +60,7 @@
     </div>
 
 
-    <div class="row">
-        <div class="w3-third">
-        <h3>Mid Drive</h3>
-        </div>
-    </div>
+    <app-header-row customTitle='Mid Drive'></app-header-row>
 
     <div class="row">
       <div class="w3-third">
@@ -95,11 +77,7 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="w3-third">
-        <h3>Rear End</h3>
-      </div>
-    </div>
+    <app-header-row customTitle='Rear End'></app-header-row>
 
     <div class="row">
       <div class="w3-third">
@@ -142,11 +120,7 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="w3-third">
-        <h3>Shifting</h3>
-      </div>
-    </div>
+    <app-header-row customTitle='Shifting'></app-header-row>
 
     <div class="row">
       <div class="w3-third">
@@ -173,11 +147,7 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="w3-third">
-        <h3>Wear Items</h3>
-      </div>
-    </div>
+    <app-header-row customTitle='Wear Items'></app-header-row>
 
     <div class="row">
       <div class="w3-third">
@@ -250,4 +220,4 @@
 
    
   </div>
-</app-layout>
+  </app-layout>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgModuleFactoryLoader } from '@angular/core';
 import { repairs } from '../assets/repairs';
 
 
@@ -29,32 +29,8 @@ export class AppComponent {
     new repairs("Pedals", "not present/need replaing", false)
   ];
   filteredArray: object = [];
-
+  isClicked:object=[];
   
-//ALSO THE PRINTBUTTON THING DOESN'T WORK???
-
-
-changeColor(where, color, opposite, ind) {
-    document.getElementById(opposite).style.color = "black";
-    document.getElementById(where).style.color = color;
-}
-
-buttChangeColor(where, newClass, opposite, newClass2) {
-    document.getElementById(where).className = "btn " + newClass;
-    document.getElementById(opposite).className = "btn " + newClass2;
-}
-
-addRepair = function(here, needed) {
-    this.repairList[here].isNeeded = needed;
-    this.filteredArray = this.repairList.filter(ind => ind.isNeeded);
-
-}
-
-//Illuminate the next row if it's not already been chosen
-illuminateRow(button1,button2) {
-    document.getElementById(button1).className = "btn btn-primary";
-    document.getElementById(button2).className = "btn btn-primary";
-}
 
 // NOW FIND SOME WAY TO RECREATE THE CLOCK CAUSE IT DOESNT WORK ANYMORE
 
