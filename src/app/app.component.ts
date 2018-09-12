@@ -1,6 +1,5 @@
-import { Component, NgModuleFactoryLoader } from '@angular/core';
-import { repairs } from '../assets/repairs';
-
+import { Component, NgModuleFactoryLoader, Input, Output, OnInit } from '@angular/core';
+import { repairs } from 'src/assets/repairs';
 
 
 @Component({
@@ -13,7 +12,8 @@ export class AppComponent {
   title = 'newest';
   constructor() {
   }
- repairList: object = [
+
+  repairList:object = [
     new repairs("Front wheel", "out of true",false),
     new repairs("Front hub", "needs tightening", false),
     new repairs("Front brake","needs repair", false),
@@ -28,11 +28,18 @@ export class AppComponent {
     new repairs("Front tube", "needs replacing", false),
     new repairs("Pedals", "not present/need replaing", false)
   ];
-  filteredArray: object = [];
-  isClicked:object=[];
   
+filteredArray:object=[];
 
 // NOW FIND SOME WAY TO RECREATE THE CLOCK CAUSE IT DOESNT WORK ANYMORE
 
+
+
+
+  arrayChangedHandler(filteredArray: object) {
+    this.filteredArray = filteredArray;
+    console.log(filteredArray);
+  }
+  
 
 }

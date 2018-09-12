@@ -6,12 +6,13 @@
 
     <app-header-row customTitle='Front End'></app-header-row>
 
-    <app-bike-part-row 
+    <app-bike-part-row #theKid 
       customTitle='Front Brake' buttonTitle1='True' 
-      buttonTitle2='Out of True' startIndex='0'
-      func2 = "(click)=addRepair('0',false,'0')"
-      ></app-bike-part-row>
-    
+      buttonTitle2='Out of True' 
+      num1="0"
+      num2="1"
+      >
+    </app-bike-part-row>
     
     <div class="row">
     <div class="w3-third">
@@ -19,12 +20,14 @@
     </div>
     
     <div class="w3-third">
-    <p><button type="button" id="button3" class="btn btn-default" [ngClass]="{'btn-success':isClicked[2]}" (click)="addRepair('1', false,'2')">Feels fine
+    <p><button type="button" id="button3" class="btn btn-default">Feels fine
     </button></p>
     </div>
-    
+<!--
+      <p><button type="button" id="button3" class="btn btn-default" [ngClass]="{'btn-success':isClicked[2]}" (click)="addRepair('1', false,'2')">Feels fine
+      -->
     <div class="w3-third">
-    <p><button type="button" id="button4" class="btn btn-default" [ngClass]="{'btn-danger':isClicked[3]}" (click)="addRepair('1', true,'3')">Bearings are loose
+    <p><button type="button" id="button4" class="btn btn-default">Bearings are loose
     </button></p>
     </div>
     </div>
@@ -35,10 +38,10 @@
     </div>
     
     <div class="w3-third">
-    <p><button type="button" id="button5" class="btn btn-default" (click)="addRepair('2', false)">Acceptable</button></p>
+    <p><button type="button" id="button5" class="btn btn-default">Acceptable</button></p>
     </div>
     <div class="w3-third">
-    <p><button type="button" id="button6" class="btn btn-default" (click)="addRepair('2', true)">Needs work
+    <p><button type="button" id="button6" class="btn btn-default">Needs work
     </button></p>
     </div>
     </div>

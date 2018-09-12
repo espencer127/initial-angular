@@ -5,19 +5,22 @@
       </div>
       
       <div class="w3-third">
-      <p><button type="button" id="button1" class="btn btn-default" [ngClass]="{'btn-success':isClicked[0]}" {{func2}}>
+      <p><button type="button" id={{num1}} class="btn btn-default" (click)="addRepair($event.target.attributes.id)" >
         {{buttonTitle1}}
       </button></p>
       </div>
       
       <div class="w3-third">
-      <p><button type="button" id="button2" class="btn btn-default" >
+      <p><button type="button" id={{num2}} class="btn btn-default"  (click)="addRepair($event.target.attributes.id)">
         {{buttonTitle2}}
       </button></p>
       </div>
     </div>
 
     <!--
+      id={{firstInd}}
+      Problems now: Passing function/variables/whatever to (click)
+      adding the ngclass thing breaks stuff
     [ngClass]="{'btn-success':isClicked[0]}" (click)="addRepair('0',false,'0')"
 [ngClass]="{'btn-danger':isClicked[1]}" (click)="addRepair('0', true,'1')"
     -->
